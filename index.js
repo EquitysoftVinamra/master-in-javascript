@@ -4,8 +4,8 @@
 
 // console.log("hello equitysoft");
 
-// // declare a variable
-// // ->we can change value of variable
+//  declare a variable
+//  ->we can change value of variable
 
 // var firstName = "Vinamra";
 // console.log(firstName);
@@ -13,15 +13,15 @@
 // firstName = "Harshish";
 // console.log(firstName);
 
-// // rules for naming variable
+//  rules for naming variable
 
-// // note you can use $firsrname as variable name 
+// note you can use $firsrname as variable name 
 
 // var value1 = 2;
 // console.log(value1 ** 3);
 
-// // let VS Var
-// // -> you can define value with same variable in let keyword
+//  let VS Var
+//  -> you can define value with same variable in let keyword
 // let Fname = "viru";
 // console.log(Fname);
 
@@ -30,7 +30,7 @@
 
 // Const in javascript
 
-// // -> We can not change the value of const
+//  -> We can not change the value of const
 
 // const pi = 3.14;
 // console.log(pi);
@@ -80,7 +80,7 @@
 
 // let fullName = string1+ " " +string2
 // console.log(fullName);
-  
+
 // let num1 = "128";
 // let num2 = "120";
 
@@ -88,4 +88,83 @@
 // console.log(newNum);
 // console.log(typeof newNum);
 
-// let aboutMe = "my name is "
+// --------------------- tamplate string -------------------- //
+
+// let firstName = "viru";
+// let age =18;
+
+// let aboutMe = "my name is " + firstName + " my age is " + age;
+
+// print any string inside the variable with backticks ` `
+// let aboutMe = `my name is ${firstName} and my age is ${age}`
+// console.log(aboutMe);
+
+// --------------------- Undefine / String -------------------- //
+
+// let firstName;
+// console.log(typeof firstName);
+
+// let lastName = "patel";
+// console.log(typeof lastName);
+
+// let variable = null;  // #it will return object in console //
+// console.log(typeof variable); 
+
+// // --> Check Max length of int 
+// console.log(Number.MAX_SAFE_INTEGER);
+
+// --------------------- Boolean -------------------- //
+// --> boolean return only true and false values
+
+// let num1 = 10;
+// let num2 = 50;
+// console.log(num1>num2);
+
+// --------------------- Boolean -------------------- //
+
+// let num1 = 10;
+// let num2 = 12;
+
+// console.log(num1==num2); 
+
+// // == will check only values not data type
+// // === will check data type also
+// console.log(num1!=num2); // not equal to sign 
+
+// --------------------- truthy / falsy -------------------- //
+
+// let age = 15;
+
+// if(age >= 18){
+//     console.log("you are eligible for voting");
+// }else{
+//     console.log("you are not eligible for voting");
+// }
+
+// try with 0,null,undefine all are falsy values
+
+let firstName = "1";
+if (firstName) {
+    console.log(firstName);
+} else {
+    console.log("first name is empty");
+}
+
+// --------------------- Ternary Operator -------------------- //
+
+let age = 4;
+let drink = age >= 5 ? "coffee" : "milk";
+
+console.log(drink);
+
+// --------------------- And Operator -------------------- //
+let name = "viru";
+age = 15;
+if (name[0] === "v" && age > 18 ) {
+    console.log("your name starts with v and age is more than 18");
+} else {
+    console.log("sorry something went wrong");
+}
+
+// --------------------- OR Operator -------------------- //
+// # or operator is check both conditions if any of them is true then it will in if condition
