@@ -21,7 +21,7 @@
 // console.log(value1 ** 3);
 
 //  let VS Var
-//  -> you can define value with same variable in let keyword
+//  -> you can define value with same variable in let keyword but can not be declare it again
 // let Fname = "viru";
 // console.log(Fname);
 
@@ -48,6 +48,7 @@
 // console.log(yourName);
 // console.log(yourName.length);
 
+// console.log(yourName.toUpperCase());
 // yourName = yourName.toUpperCase();
 // yourName = yourName.toLowerCase();
 // console.log(yourName);
@@ -143,28 +144,170 @@
 
 // try with 0,null,undefine all are falsy values
 
-let firstName = "1";
-if (firstName) {
-    console.log(firstName);
-} else {
-    console.log("first name is empty");
-}
+// let firstName = "1";
+// if (firstName) {
+//     console.log(firstName);
+// } else {
+//     console.log("first name is empty");
+// }
 
 // --------------------- Ternary Operator -------------------- //
 
-let age = 4;
-let drink = age >= 5 ? "coffee" : "milk";
+// let age = 4;
+// let drink = age >= 5 ? "coffee" : "milk";
 
-console.log(drink);
+// console.log(drink);
 
 // --------------------- And Operator -------------------- //
-let name = "viru";
-age = 15;
-if (name[0] === "v" && age > 18 ) {
-    console.log("your name starts with v and age is more than 18");
-} else {
-    console.log("sorry something went wrong");
-}
+// let name = "viru";
+// age = 15;
+// if (name[0] === "v" && age > 18 ) {
+//     console.log("your name starts with v and age is more than 18");
+// } else {
+//     console.log("sorry something went wrong");
+// }
 
 // --------------------- OR Operator -------------------- //
 // # or operator is check both conditions if any of them is true then it will in if condition
+
+// Nested if
+
+// let winningNumber = 19;
+// let userGuess = +prompt("guess a number");
+
+// console.log(typeof userGuess, userGuess);
+
+// if(userGuess === winningNumber){
+//     console.log("your guess is right")
+// }else{
+//     if(userGuess > winningNumber){
+//         console.log("your guess is too high")
+//     }else{
+//         console.log("your guess is too low")
+//     }
+// }
+
+// if(){
+//     execution...
+// }else if(){
+//     execution...
+// }else if(){
+//     execution...
+// }else{
+//     execution...
+// }
+
+// --------------------- Switch case -------------------- //
+
+// let day =0;
+
+// switch (day) {
+//     case 0:
+//         console.log("sunday");
+//         break;
+//     case 1:
+//         console.log("monday");
+//         break;
+//     case 2:
+//         console.log("tuesday");
+//         break;
+//     case 3:
+//         console.lconsole.log(i);og("wednesday");
+//         break;
+//     case 4:
+//         console.log("thrusday");
+//         break;
+//     case 5:
+//         console.log("friday");
+//         break;
+//     case 6:
+//         console.log("saturday");
+//         break;
+//     default:
+//         console.log("invalid day");
+//         break;
+// }
+
+// --------------------- While loop -------------------- //
+
+// let i = 1;
+
+// while(i<=9){
+//     console.log(i);
+//     i++;
+// }
+// console.log(`current value of i is ${i}`);
+
+// let number = 10;
+// let total = 0;
+// let i = 0;
+
+// while(i<=number){
+//     total = total+i;
+//     i++;
+// }
+// console.log(total);
+
+// --------------------- for loop -------------------- //
+
+// for(let i=0; i<=9; i++){
+//     console.log(i);
+// }
+
+// let total = 0;
+// let num = 10;
+
+// for(let i=1; i<=num; i++){
+//     total = total+i;
+// }
+// console.log(total);
+
+
+// ------------------ Break / Continue ----------------- //
+
+// for(let i = 0; i<= 10; i++){
+//     if(i==4){
+//         continue;
+//     }
+
+//     console.log(i);
+// }
+
+// #break will stop exicution of code if condition is satisfed
+// #continue will skip the condition and then continue to the loop
+
+// --------------------- do whlie loop -------------------- //
+
+// let i = 0;
+// do{
+//     console.log(i)
+// }while(i<=9);
+
+// --------------------- Arrays -------------------- //
+// # you can store any data type in array
+
+// let fruits = ["apple","banana","graps"];
+// console.log(fruits);
+
+// let fruits = ["apple","banana","graps"];
+// fruits[1] = "mango";
+// console.log(fruits);
+
+// console.log(typeof fruits);  // data type is object
+
+// console.log(Array.isArray(fruits)); //check is array or not
+
+// let fruits = ["apple","banana","graps"];
+// fruits.push("elephant");  // element push in array
+// console.log(fruits);
+
+// fruits.pop();             // element pop in array
+// console.log(fruits);
+
+// fruits.unshift("motto");     // unshift is used for push element from starting
+// fruits.unshift("hello");
+// fruits.shift();              // shift is used for pop from starting
+// console.log(fruits);
+
+//  Primitive vs reference data types
+
