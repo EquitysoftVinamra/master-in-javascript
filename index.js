@@ -89,7 +89,7 @@
 // console.log(newNum);
 // console.log(typeof newNum);
 
-// --------------------- tamplate string -------------------- //
+// --------------------- Tamplate string -------------------- //
 
 // let firstName = "viru";
 // let age =18;
@@ -311,3 +311,173 @@
 
 //  Primitive vs reference data types
 
+// --> #primtive data type store in stack when refrence data type stor in heap
+// --> #in stack every element have seprate values when in a heap a element have same value for an array
+
+// --------------------- How to clone an array -------------------- //
+
+// --> need more practice for this
+
+// --------------------- for loop in array -------------------- //
+
+// let fruits = ["apple","mango","graps","banana"];
+
+// console.log(fruits.length);
+// console.log(fruits[fruits.length-1]);
+
+// let fruits2=[];
+// for (let i = 0; i<fruits.length; i++){
+//     fruits2.push(fruits[i].toUpperCase());
+// }
+// console.log(fruits2);
+
+// ------------------ Const for creating an array ----------------- //
+
+// #don't forget array is store in heap...so there in specific address for 
+// variable and here we can not change the value of the varible
+
+// const fruits = ["apple","mango"]; //0X11
+// fruits.push("banana");
+// console.log(fruits);
+
+// we can use any arrray methods to chnag the value of const in array
+// use the const while defining an array
+
+// --------------------- while loop in array -------------------- //
+
+// const fruits = ["apple","mango","banana","graps"]; 
+// const fruits2 = [];
+// let i = 0;
+// while(i<fruits.length){
+//     fruits2.push(fruits[i].toUpperCase());
+//     i++;
+// }
+
+// console.log(fruits2);
+
+// --------------------- array destructruing -------------------- //
+
+// const myArr = ["value1","value2","value3","value4"];
+// let myvar1 = myArr[0];
+// let myvar2 = myArr[1];
+
+// console.log("value of myvar1 is", myvar1);
+// console.log("value of myvar2 is", myvar2);
+
+// let [myvar1,myvar2,...myNewArray] = myArr;  // skip for define next value in the array
+
+// let myNewArray = myArr.slice(2);
+
+// console.log("value of myvar1 is", myvar1);
+// console.log("value of myvar2 is", myvar2);
+
+// console.log(myNewArray);
+// console.log(myArr);
+
+// --------------------- Objects in JS -------------------- //
+
+// -->object don't have index
+// -->object store key value pairs
+// -->use dot notation for accessing property of the object
+
+// const person = {
+//     name:"viru",
+//     age:19,
+//     hobbies:["play","code"]
+// }
+// console.log(typeof person);
+// console.log(person);
+// console.log(person.name);
+// console.log(person.age);
+// console.log(person.hobbies);
+
+
+// Add key value pair in to object
+
+// person.gender = "male";
+// console.log(person);
+
+// ------------ Dot and Bracket notation in object ------------ //
+
+// --> in object the key are default in string..
+
+// const key = "email";
+// const person = {
+//     name:"viru",
+//     age:19,
+//     hobbies:["play","code"],
+//     "my intrest" : ["athlets", "racing"]
+// }
+
+// console.log(person["name"]); // you also access property by square brackets
+// console.log(person["my intrest"]); 
+
+// email : "vinpatel@gmail.com"
+
+// person[key] = "vinpatel@gmail.com";
+// console.log(person);
+
+// ------------ iterate object ------------ //
+
+// const person = {
+//     name:"viru",
+//     age:19,
+//     hobbies:["play","code"]
+// }
+
+// for(let key in person){
+//     console.log(`${key} :  ${person[key]}`);
+//     // console.log(key ,person[key]);
+// }
+
+// console.log(Object.keys(person));
+
+// for(let key of Object.keys(person)){
+//     console.log(person[key]);
+// }
+
+// ------------ computed properties ------------ //
+
+// const key1 = "objkey1";
+// const key2 = "objkey2";
+
+// const value1 = "myvalue1";
+// const value2 = "myvalue2";
+
+// const obj = {
+//     [key1] : value1,
+//     [key2] : value2
+// }
+
+// const obj = {};
+// obj[key1] = value1;
+// obj[key2] = value2;
+// console.log(obj);
+
+// ------------ spread operator ------------ //
+
+// const array1 = [1,2,3];
+// const array2 = [5,6,7];
+
+// const newArr = [...array1,...array2];
+// const newArr = [..."abc"];   // string and arrays are iterable
+
+// console.log(newArr);
+
+// --> spread operator in object
+
+// const obj1 = {
+//     key1 : "value1",
+//     key2 : "value2"
+//     // key1 : "value598" // override key1
+// }
+
+// const obj2 = {
+//     key3 : "value3",
+//     key4 : "value4",
+// }
+
+// console.log(obj1);
+
+// const newObject = { ...obj1, ...obj2};
+// console.log(newObject);
