@@ -5,7 +5,7 @@
 // console.log("hello equitysoft");
 
 //  declare a variable
-//  ->we can change value of variable
+//  ->we can change value of variable later
 
 // var firstName = "Vinamra";
 // console.log(firstName);
@@ -97,7 +97,7 @@
 // let aboutMe = "my name is " + firstName + " my age is " + age;
 
 // print any string inside the variable with backticks ` `
-// let aboutMe = `my name is ${firstName} and my age is ${age}`
+// let aboutMe = `my name is ${firstName} and my age is ${age}`  //  use back ticks for print variable inside the string
 // console.log(aboutMe);
 
 // --------------------- Undefine / String -------------------- //
@@ -293,7 +293,7 @@
 // fruits[1] = "mango";
 // console.log(fruits);
 
-// console.log(typeof fruits);  // data type is object
+// console.log(typeof fruits);  // data type of array is object
 
 // console.log(Array.isArray(fruits)); //check is array or not
 
@@ -481,3 +481,34 @@
 
 // const newObject = { ...obj1, ...obj2};
 // console.log(newObject);
+
+// ------------ Object destuctring ------------ //
+
+// const band = {
+//     bandName : "Sanam",
+//     famousSomng : "tera nam",
+//     year : 2001
+// }
+
+// let {bandName:var1,famousSomngm,...restProps} = band;
+// console.log(bandName);
+// console.log(var1);
+// console.log(restProps);
+
+// ------------ Object Inside Array ------------ //
+
+// # it is very usefull in real world application
+
+const users = [
+    {userId : 1, firstName : "vinamra" , gender : "male"},
+    {userId : 2, firstName : "parth" , gender : "male"},
+    {userId : 3, firstName : "lakhan" , gender : "male"}
+]
+
+// console.log(users);
+
+for (let user of users ){
+    // console.log(user.firstName);
+    // console.log(user);
+}
+
