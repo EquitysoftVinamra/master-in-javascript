@@ -340,7 +340,7 @@
 // fruits.push("banana");
 // console.log(fruits);
 
-// we can use any arrray methods to chnag the value of const in array
+// we can use any arrray methods to change the value of const in array
 // use the const while defining an array
 
 // --------------------- while loop in array -------------------- //
@@ -427,7 +427,7 @@
 
 // for(let key in person){
 //     console.log(`${key} :  ${person[key]}`);
-//     // console.log(key ,person[key]);
+// console.log(key ,person[key]);
 // }
 
 // console.log(Object.keys(person));
@@ -499,16 +499,179 @@
 
 // # it is very usefull in real world application
 
-const users = [
-    {userId : 1, firstName : "vinamra" , gender : "male"},
-    {userId : 2, firstName : "parth" , gender : "male"},
-    {userId : 3, firstName : "lakhan" , gender : "male"}
-]
+// const users = [
+//     {userId : 1, firstName : "vinamra" , gender : "male"},
+//     {userId : 2, firstName : "parth" , gender : "male"},
+//     {userId : 3, firstName : "lakhan" , gender : "female"}
+// ]
 
 // console.log(users);
 
-for (let user of users ){
+// for (let user of users ){
     // console.log(user.firstName);
     // console.log(user);
+// }
+
+// ------------ Nested Distucturing ------------ //
+
+// const users = [
+//     {userId : 1, firstName : "vinamra" , gender : "male"},
+//     {userId : 2, firstName : "parth" , gender : "male"},
+//     {userId : 3, firstName : "lakhan" , gender : "female"}
+// ]
+
+// const [user1,user2,user3] =  users;
+
+// const [{firstName},,{gender}] =  users;
+
+// console.log(gender);
+
+// console.log(users);
+// console.log(user1.userId,user3.gender);
+
+// ------------ Function in Javascript ------------ //
+
+// function demo(){
+//     console.log("happy birthday beta.....");
+// }
+// demo();
+// demo();
+
+// function twoplusfour(){
+//     // console.log(2+4);
+//     return 2+4;
+// }
+// twoplusfour();
+
+// const returnedValue = twoplusfour();
+// console.log(returnedValue);
+
+// function sumTwoNum(n1,n2){
+//     return n1+n2   
+// }
+// const returnedValue = sumTwoNum();
+// console.log(returnedValue);
+
+// undefined + undefined = NaN
+
+// function isEven(input){
+
+    // if(input % 2 === 0){
+    //     return true;
+    // }
+    // return false;
+    
+    // return input % 2 === 0;
+
+// }
+
+// console.log(isEven(10));
+
+// function firstChar(anystring){
+//     return anystring[0];  // return first character of string
+// }
+// console.log(firstChar("abc"));
+
+function findTarget(array, target){
+    for(let i = 0; i<array.length; i++){
+        if(array[i] === target){
+            return i;
+        }        
+    }
+    return -1;
 }
 
+const myArr = [1,3,8,25,90]
+const ans = findTarget(myArr, 25);
+console.log(ans);
+
+// -------------------- Function expresion -------------------- // 
+
+const demo = function (){
+    console.log("happy birthday beta.....");
+}
+demo();
+
+// -------------------- Arrow Function -------------------- // 
+
+// const demo = () => {
+//     console.log("happy birthday beta.....");
+// }
+// demo();
+
+// const isEven = (num) => {
+//     return num % 2 === 0;
+// }
+
+// const isEven = number => number % 2 === 0;  // you can use it when pass single argument inside the function....
+// console.log(isEven(2));
+
+
+// --------------------- Hoisting ------------------------- //
+
+// demo();    // here we can declare function before execution
+
+// function demo(){
+//     console.log("hello there");
+// }
+
+// we can use hoisting in case of function declaration only
+// in function expression and arrow function hoisting not supported
+
+// -------------------- Function inside function -------------------- // 
+
+function myApp(){
+
+    const myFun = () => {
+        console.log("hello from my func");
+    }
+
+    const sumTwo = (num1,num2) => {
+        return num1 * num2;
+    }
+
+    console.log("hello from my app");
+    myFun();
+    console.log(sumTwo(5,5));
+
+}
+
+myApp();
+
+// Lexical scope 
+
+// Block scope VS Function Scope
+
+// let & const are block scope
+// var is function scope
+
+// -------------------------------- rest parameters ----------------------------//
+
+function myFunc(a,b,...c){
+    console.log(`the value of a is ${a}`);
+    console.log(`the value of b is ${b}`);
+    console.log(`the value of c is ${c}`);
+    console.log(`the value of c is ` , c);
+}
+myFunc(4,5,6,7,8,9,10);
+
+function addAll(...numbers){
+    console.log(numbers);
+    console.log(Array.isArray(numbers));
+}
+
+addAll(1,2,3,4,5);
+
+// -------------------------------- Call Back Function ----------------------------//
+
+function myFunc2(name){
+    console.log("inside the func2");
+    console.log(`my name is ${name}`);
+}
+
+function myFunc(callback){
+    console.log("hey there i am mr func");
+    callback("vinamra");
+}
+
+myFunc(myFunc2);
