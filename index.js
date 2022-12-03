@@ -572,25 +572,25 @@
 // }
 // console.log(firstChar("abc"));
 
-function findTarget(array, target){
-    for(let i = 0; i<array.length; i++){
-        if(array[i] === target){
-            return i;
-        }        
-    }
-    return -1;
-}
+// function findTarget(array, target){
+//     for(let i = 0; i<array.length; i++){
+//         if(array[i] === target){
+//             return i;
+//         }        
+//     }
+//     return -1;
+// }
 
-const myArr = [1,3,8,25,90]
-const ans = findTarget(myArr, 25);
-console.log(ans);
+// const myArr = [1,3,8,25,90]
+// const ans = findTarget(myArr, 25);
+// console.log(ans);
 
 // -------------------- Function expresion -------------------- // 
 
-const demo = function (){
-    console.log("happy birthday beta.....");
-}
-demo();
+// const demo = function (){
+//     console.log("happy birthday beta.....");
+// }
+// demo();
 
 // -------------------- Arrow Function -------------------- // 
 
@@ -620,23 +620,23 @@ demo();
 
 // -------------------- Function inside function -------------------- // 
 
-function myApp(){
+// function myApp(){
 
-    const myFun = () => {
-        console.log("hello from my func");
-    }
+//     const myFun = () => {
+//         console.log("hello from my func");
+//     }
 
-    const sumTwo = (num1,num2) => {
-        return num1 * num2;
-    }
+//     const sumTwo = (num1,num2) => {
+//         return num1 * num2;
+//     }
 
-    console.log("hello from my app");
-    myFun();
-    console.log(sumTwo(5,5));
+//     console.log("hello from my app");
+//     myFun();
+//     console.log(sumTwo(5,5));
 
-}
+// }
 
-myApp();
+// myApp();
 
 // Lexical scope 
 
@@ -647,31 +647,140 @@ myApp();
 
 // -------------------------------- rest parameters ----------------------------//
 
-function myFunc(a,b,...c){
-    console.log(`the value of a is ${a}`);
-    console.log(`the value of b is ${b}`);
-    console.log(`the value of c is ${c}`);
-    console.log(`the value of c is ` , c);
-}
-myFunc(4,5,6,7,8,9,10);
+// function myFunc(a,b,...c){
+//     console.log(`the value of a is ${a}`);
+//     console.log(`the value of b is ${b}`);
+//     console.log(`the value of c is ${c}`);
+//     console.log(`the value of c is ` , c);
+// }
+// myFunc(4,5,6,7,8,9,10);
 
-function addAll(...numbers){
-    console.log(numbers);
-    console.log(Array.isArray(numbers));
-}
+// function addAll(...numbers){
+//     console.log(numbers);
+//     console.log(Array.isArray(numbers));
+// }
 
-addAll(1,2,3,4,5);
+// addAll(1,2,3,4,5);
 
 // -------------------------------- Call Back Function ----------------------------//
 
-function myFunc2(name){
-    console.log("inside the func2");
-    console.log(`my name is ${name}`);
-}
+// function myFunc2(name){
+//     console.log("inside the func2");
+//     console.log(`my name is ${name}`);
+// }
 
-function myFunc(callback){
-    console.log("hey there i am mr func");
-    callback("vinamra");
-}
+// function myFunc(callback){
+//     console.log("hey there i am mr func");
+//     callback("vinamra");
+// }
 
-myFunc(myFunc2);
+// myFunc(myFunc2);
+
+
+// -------------------------------- Function returning function ----------------------------//
+
+
+// function myFunc(){
+//     // return "a";
+//     // return [1,2,3];
+//     // return {name : "viru" , age:"20"};
+
+//     function hello(){
+//         return "hello world";
+//     }
+
+//     return hello;
+// }
+
+// const ans = myFunc();
+// console.log(ans);
+
+// ans(); 
+
+// ----------------------------- array methods -----------------------------
+
+// const numbers = [4,5,6,8];
+
+// function mulbytwo(number , index){
+//     console.log("index is" , index);
+//     console.log(`${number} * 2 = ${number*2} `);
+// }
+
+// mulbytwo(numbers[0],0);
+
+// for(let i = 0; i<numbers.length; i++){
+//     mulbytwo(numbers[i],i);
+// }
+
+// numbers.forEach(mulbytwo);
+
+// numbers.forEach(function(number,index){
+//     // console.log(`index is ${index} and number is ${number}`)
+//     console.log(number*2 , `index is ${index}`);
+// });
+
+// const users = [
+//     { firstName : "vinamra", age : 25 },
+//     { firstName : "mohit", age : 25 },
+//     { firstName : "ashish", age : 25 },
+//     { firstName : "pratik", age : 25 }
+// ]
+
+// users.forEach(function(user){
+//     console.log(` first name is ${user.firstName}`);
+// });
+
+// users.forEach((user,index)=>{
+//     console.log(user.firstName, index);
+// });
+
+// ----------------------------- Map methods -----------------------------
+
+// its very important and mostly used method in react
+
+// const numbers = [3,4,6,1,8];
+
+// const square = function(number){
+//     return number * number;
+// }
+
+// const squareNumber =  numbers.map(square);
+// console.log(squareNumber);
+
+// const users = [
+//     { firstName : "vinamra", age : 25 },
+//     { firstName : "mohit", age : 25 },
+//     { firstName : "ashish", age : 25 },
+//     { firstName : "pratik", age : 25 }
+// ]
+
+// const userNames = users.map((user)=>{
+//     return user.firstName;
+// })
+// console.log(userNames);
+
+// ----------------------------- Filter methods -----------------------------
+
+// in filter method callback function always return true or false only
+
+// const numbers = [1,3,2,6,4,8];
+
+// const isEven = function(number)
+// {
+//     return number % 2 === 0;
+// }
+
+// const evenNumbers = numbers.filter(isEven);
+// console.log(evenNumbers);
+
+// ----------------------------- Reduce methods -----------------------------
+
+const numbers = [1,2,3,4,5];
+
+// aim : sum of all numbers in array
+
+const sum = numbers.reduce((accumulator , currentValue )=>{
+    return accumulator + currentValue;
+});
+
+console.log(sum);
