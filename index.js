@@ -345,19 +345,19 @@
 
 // --------------------- while loop in array -------------------- //
 
-// const fruits = ["apple","mango","banana","graps"]; 
-// const fruits2 = [];
-// let i = 0;
-// while(i<fruits.length){
-//     fruits2.push(fruits[i].toUpperCase());
-//     i++;
-// }
+const fruits = ["apple","mango","banana","graps"]; 
+const fruits2 = [];
+let i = 0;
+while(i<fruits.length){
+    fruits2.push(fruits[i].toUpperCase());
+    i++;
+}
 
-// console.log(fruits2);
+console.log(fruits2);
 
 // --------------------- array destructruing -------------------- //
 
-// const myArr = ["value1","value2","value3","value4"];
+const myArr = ["value1","value2","value3","value4"];
 // let myvar1 = myArr[0];
 // let myvar2 = myArr[1];
 
@@ -366,13 +366,13 @@
 
 // let [myvar1,myvar2,...myNewArray] = myArr;  // skip for define next value in the array
 
-// let myNewArray = myArr.slice(2);
+let myNewArray = myArr.slice(2);
 
 // console.log("value of myvar1 is", myvar1);
 // console.log("value of myvar2 is", myvar2);
 
-// console.log(myNewArray);
-// console.log(myArr);
+console.log(myNewArray);
+console.log(myArr);
 
 // --------------------- Objects in JS -------------------- //
 
@@ -395,6 +395,7 @@
 // Add key value pair in to object
 
 // person.gender = "male";
+// person.email ="vinamra@equitysoft.in"
 // console.log(person);
 
 // ------------ Dot and Bracket notation in object ------------ //
@@ -419,35 +420,36 @@
 
 // ------------ iterate object ------------ //
 
-// const person = {
-//     name:"viru",
-//     age:19,
-//     hobbies:["play","code"]
-// }
+const person = {
+    name:"viru",
+    age:19,
+    hobbies:["play","code"]
+}
 
-// for(let key in person){
-//     console.log(`${key} :  ${person[key]}`);
+for(let key in person){
+    console.log(`${key} :  ${person[key]}`);
+
 // console.log(key ,person[key]);
-// }
+}
 
-// console.log(Object.keys(person));
+console.log(Object.keys(person));
 
-// for(let key of Object.keys(person)){
-//     console.log(person[key]);
-// }
+for(let key of Object.keys(person)){
+    console.log(person[key]);
+}
 
 // ------------ computed properties ------------ //
 
-// const key1 = "objkey1";
-// const key2 = "objkey2";
+const key1 = "objkey1";
+const key2 = "objkey2";
 
-// const value1 = "myvalue1";
-// const value2 = "myvalue2";
+const value1 = "myvalue1";
+const value2 = "myvalue2";
 
-// const obj = {
-//     [key1] : value1,
-//     [key2] : value2
-// }
+const obj = {
+    [key1] : value1,
+    [key2] : value2
+}
 
 // const obj = {};
 // obj[key1] = value1;
@@ -775,12 +777,64 @@
 
 // ----------------------------- Reduce methods -----------------------------
 
-const numbers = [1,2,3,4,5];
+// const numbers = [1,2,3,4,5];
 
 // aim : sum of all numbers in array
 
-const sum = numbers.reduce((accumulator , currentValue )=>{
-    return accumulator + currentValue;
-});
+// const sum = numbers.reduce((accumulator , currentValue )=>{
+//     return accumulator + currentValue;
+// });
 
-console.log(sum);
+// console.log(sum);
+
+// ------------------------- Other Array Methods -----------------------------
+
+
+
+// ------------------------- Set in  Array  -----------------------------
+ 
+// let evenNumbers = new Set([1,2,3,3]);
+// console.log(evenNumbers);
+// console.log(evenNumbers[2]);  // it will return undefined
+
+// it will not allowed duplocate value
+
+// let num = new Set(["xyz"]);
+// console.log(num);
+
+// const numbers = new Set();
+
+// numbers.add(1);
+// console.log(numbers);
+
+
+
+// ----->-------->--------->------- Second Video  ------>-------->----------->----
+
+// console.log(this);
+// console.log(window);
+// console.log(myFunction);
+// console.log(fullName);
+
+// function myFunction(){
+//     console.log("this is my function");
+// }
+
+// var firstName = "Vinamra";
+// var lastName = "Dashlaniya";
+// // var fullName = firstName + " " + lastName;
+// var fullName = `${firstName} ${lastName}`;
+
+// console.log(fullName);
+
+// var counts = ["one", "two", "three", "four", "five"];
+// var reversed = counts.reverse(); 
+
+// console.log(reversed);
+// console.log(counts.reverse());
+
+// var d = new Date();
+// console.log(d);
+
+var now = new Date();
+alert(now); 
